@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { login, logout } from "./utils";
 
 // React Bootstrap css
@@ -19,6 +19,26 @@ import getConfig from "./config";
 const { networkId } = getConfig(process.env.NODE_ENV || "development");
 
 export default function App() {
+  const [userHasNFT, setuserHasNFT] = useState(false);
+
+  useEffect(() => {
+    const receivedNFT = async () => {
+      console.log(
+        await window.contract.check_token({
+          id: `${window.account}-go-team-token`,
+        })
+      );
+      if (window.accountId !== "") {
+        setuserHasNFT(
+          await window.contract.check_token({
+            id: `${window.account}-go-team-token`,
+          })
+        );
+      }
+    };
+    receivedNFT();
+  }, []);
+
   return (
     <React.Fragment>
       {" "}
@@ -65,7 +85,7 @@ export default function App() {
           <InfoBubble />
         </Row>
         <Row style={{ marginTop: "3vh" }}>
-          <MintingTool />
+          <MintingTool userNFTStatus={userHasNFT} />
         </Row>
       </Container>
     </React.Fragment>
