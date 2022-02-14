@@ -6,20 +6,7 @@ const BN = require("bn.js");
 
 const MintingTool = (props) => {
   const mintNFT = async () => {
-    await window.contract.nft_mint(
-      {
-        token_id: `${window.accountId}-go-team-token`,
-        metadata: {
-          title: "My Non Fungible Team Token",
-          description: "The Team Most Certainly Goes :)",
-          media:
-            "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif",
-        },
-        receiver_id: window.accountId,
-      },
-      300000000000000, // attached GAS (optional)
-      new BN("1000000000000000000000000")
-    );
+    console.log("add contract function call here ");
   };
 
   return (
