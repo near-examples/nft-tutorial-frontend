@@ -1,1 +1,0 @@
-/Users/doriankinoocrutcher/Documents/NEAR/Developer/nftZero2Hero/nft-mint-frontend/contract/target/wasm32-unknown-unknown/debug/libgreeter.rlib: /Users/doriankinoocrutcher/Documents/NEAR/Developer/nftZero2Hero/nft-mint-frontend/contract/src/lib.rs

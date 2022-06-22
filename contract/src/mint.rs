@@ -78,8 +78,4 @@ impl Contract {
         //refund any excess storage if the user attached too much. Panic if they didn't attach enough to cover the required.
         refund_deposit(required_storage_in_bytes);
     }
-    pub fn check_token(&self, id:TokenId)->bool{
-        self.tokens_by_id.contains_key(&id)
-    }
-
 }
