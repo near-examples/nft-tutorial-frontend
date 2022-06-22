@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/doriankinoocrutcher/Documents/NEAR/Developer/nftZero2Hero/nft-mint-frontend/contract/target/wasm32-unknown-unknown/debug/build/typenum-e850512b0eed675b/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/doriankinoocrutcher/Documents/NEAR/Developer/nftZero2Hero/nft-mint-frontend/contract/target/wasm32-unknown-unknown/debug/build/typenum-e850512b0eed675b/out/op.rs
