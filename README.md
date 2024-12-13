@@ -44,7 +44,9 @@ Step 0: Install near-cli (optional)
 
 [near-cli] is a command line interface (CLI) for interacting with the NEAR blockchain. It was installed to the local `node_modules` folder when you ran `yarn install`, but for best ergonomics you may want to install it globally:
 
-    yarn install --global near-cli
+```sh
+yarn install --global near-cli
+```
 
 Or, if you'd rather use the locally-installed version, you can prefix all `near` commands with `npx`
 
@@ -58,27 +60,33 @@ Each account on NEAR can have at most one contract deployed to it. If you've alr
 
 1. Authorize NEAR CLI, following the commands it gives you:
 
-      near login
+```sh
+near login
+```
 
 2. Create a subaccount (replace `YOUR-NAME` below with your actual account name):
 
-      near create-account nft-mint-frontend.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
-
+```sh
+near create-account nft-mint-frontend.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
+```
 
 Step 2: set contract name in code
 ---------------------------------
 
 Modify the line in `src/config.js` that sets the account name of the contract. Set it to the account id you used above.
 
-    const CONTRACT_NAME = process.env.CONTRACT_NAME || 'nft-mint-frontend.YOUR-NAME.testnet'
-
+```js
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'nft-mint-frontend.YOUR-NAME.testnet'
+```
 
 Step 3: deploy!
 ---------------
 
 One command:
 
-    yarn deploy
+```sh
+yarn deploy
+```
 
 As you can see in `package.json`, this does two things:
 
